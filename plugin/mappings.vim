@@ -1,8 +1,11 @@
  " Search git files in project
-nnoremap <leader>f :GFiles<cr>
+nnoremap <leader>g :GFiles<cr>
+
+" Grep for files on FS
+nnoremap <leader>f :Ag<Space>
 
 " clear search results
-nnoremap <leader>sc :noh<cr>
+nnoremap <CR> :nohlsearch<cr><cr>
 
 " Show file tree
 nnoremap <leader>e :NERDTreeToggle<cr>
@@ -28,9 +31,6 @@ nnoremap <leader>bb :Buffers<cr>
 " select word
 nnoremap <leader>d viw
 
-" remove word
-nnoremap <C-d> ciw
-
 " Git revert line
 nnoremap <leader>hu :GitGutterRevertHunk<cr>
 
@@ -39,3 +39,17 @@ nnoremap <C-l> gt
 
 " find file in file tree
 nnoremap <leader>r :NERDTreeFind<cr>
+
+" window controlers
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+
+" macros
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
+
+" navigate between errors
+"nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+"nmap <silent> <C-j> <Plug>(ale_next_wrap)

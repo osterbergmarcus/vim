@@ -1,10 +1,11 @@
 scriptencoding utf-8
+set encoding=utf8
 
 let $LANG = 'en_US.utf8'
 
 " color theme
-let g:rehash256 = 1
-colorscheme molokai
+set background=dark
+colorscheme OceanicNext
 
 " other interesting themes
 "baycomb
@@ -15,6 +16,8 @@ colorscheme molokai
 "darkspectrum
 "native
 "railscasts
+" molokai using let g:rehash256 = 1
+" Solarized
 
 syntax enable
 set laststatus=2                    " keep last status, useful for function signatures
@@ -70,5 +73,15 @@ if has("gui_vimr")
   set termguicolors                 " use gui background/foreground
 endif
 
+" set cursorline only for the current buffer
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
+
 " italic comment highlight
-highlight Comment cterm=italic gui=italic
+highlight Comment cterm=italic
+
+" remove underline from cursrorline
+highlight CursorLine cterm=NONE

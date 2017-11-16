@@ -16,15 +16,9 @@ func! CompleteJavascriptPath()
     return ""
   endfu
 
-" Automatically start language servers.
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {}
+let g:LanguageClient_serverCommands = {
+	\ 'javascript': ['flow-language-server', '--stdio'],
+	\ 'javascript.jsx': ['flow-language-server', '--stdio'],
+	\ 'javascript.jsx.flow': ['flow-language-server', '--stdio'],
+	\}
 
-if executable('javascript-typescript-stdio')
-let g:LanguageClient_serverCommands['javascript'] = ['flow-language-server', '--stdio']
-let g:LanguageClient_serverCommands['javascript.jsx'] = ['flow-language-server', '--stdio']
-let g:LanguageClient_serverCommands['javascript.jsx.flow'] = ['flow-language-server', '--stdio']
-else
-  echo "javascript-typescript-stdio not installed!\n"
-  :cq
-endif

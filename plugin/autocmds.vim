@@ -1,5 +1,3 @@
-autocmd! BufWritePost,BufReadPost * Neomake
-
 " automatically close preview window when done
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -15,10 +13,6 @@ augroup my_neomake_signs
     hi link NeomakeWarning NeomakeMessage
 augroup END
 
-" prettier for javascript, let's try it, after that a fix my js with eslint is
-" sometimes needed as well
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --print-width\ 120\ --tab-width\ 4\ --single-quote\ --trailing-comma
-
 function! SearchFlowBin()
   let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
   if matchstr(local_flow, "^\/\\w") == ''
@@ -26,8 +20,7 @@ function! SearchFlowBin()
   endif
   if executable(local_flow)
     let g:flow#flowpath = local_flow
-    let g:deoplete#sources#flow#flow_bin = local_flow
-    let g:neomake_flow_flow_exe = local_flow
+    let g:ale_javascript_flow_executable = local_flow
   endif
 endfunction
 
@@ -39,7 +32,7 @@ function! SearchEslintBin()
     let local_eslint= getcwd() . "/" . local_eslint
   endif
   if executable(local_eslint)
-    let g:neomake_javascript_eslint_exe = local_eslint
+	let g:ale_javascript_eslint_executable = local_eslint
   endif
 endfunction
 

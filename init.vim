@@ -28,6 +28,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
 Plug 'autozimu/LanguageClient-neovim', { 'do': 'npm install -g javascript-typescript-langserver flow-language-server' }
 Plug 'w0rp/ale'
+Plug 'rust-lang/rust.vim'
 
 "Colors"
 Plug 'mhartington/oceanic-next'

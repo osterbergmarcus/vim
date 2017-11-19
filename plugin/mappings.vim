@@ -53,3 +53,8 @@ vnoremap Q :norm @q<cr>
 " navigate between errors
 "nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 "nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" language server
+nmap gd :call LanguageClient_textDocument_definition()<CR>
+nmap <leader>h :call LanguageClient_textDocument_hover()<CR>
+nmap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>

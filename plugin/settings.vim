@@ -4,8 +4,9 @@ set encoding=utf8
 let $LANG = 'en_US.utf8'
 
 " color theme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
-colorscheme OceanicNext
+colorscheme gruvbox
 
 " other interesting themes
 "baycomb

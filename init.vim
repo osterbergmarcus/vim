@@ -31,7 +31,8 @@ Plug 'w0rp/ale'
 Plug 'rust-lang/rust.vim'
 
 "Colors"
-Plug 'mhartington/oceanic-next'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'morhetz/gruvbox'
 
 " Initialize plugin system
 call plug#end()
@@ -63,4 +64,3 @@ augroup checktime
     autocmd BufEnter,CursorHold,CursorHoldI,CursorMoved,CursorMovedI,FocusGained,BufEnter,FocusLost,WinLeave * checktime
   endif
 augroup END
-

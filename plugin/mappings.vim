@@ -1,5 +1,5 @@
  " Search git files in project
-nnoremap <leader>g :GFiles<cr>
+nnoremap <C-f> :GFiles<cr>
 
 " Grep for files on FS
 nnoremap <leader>f :Ag<Space>
@@ -30,9 +30,6 @@ nnoremap <leader>bb :Buffers<cr>
 
 " select word
 nnoremap <leader>d viw
-
-" Git revert line
-nnoremap <leader>hu :GitGutterRevertHunk<cr>
 
 " navigate between tabs
 nnoremap <C-l> gt

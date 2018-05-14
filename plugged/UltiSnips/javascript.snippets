@@ -34,9 +34,6 @@ const ${1:`!v expand('%:t:r')`} = ({ ${3:...props} }) => (
 $1.defaultProps = {
 };
 
-$1.sampleProps = () => ({
-});
-
 $1.propTypes = {
 };
 
@@ -47,3 +44,6 @@ snippet esl "eslint disable"
 // eslint-disable-next-line ${1:no-shadow}
 endsnippet
 
+snippet pur "purge persistor"
+	persistor.purge() ${1:no-shadow}
+endsnippet

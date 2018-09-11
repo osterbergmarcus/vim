@@ -8,7 +8,6 @@ Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'fatih/vim-go'
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' } 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
@@ -25,20 +24,22 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 Plug 'ryanoasis/vim-devicons'
-Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
-Plug 'autozimu/LanguageClient-neovim', { 'do': 'npm install -g javascript-typescript-langserver flow-language-server' }
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'w0rp/ale'
 Plug 'rust-lang/rust.vim'
 
 "Colors"
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'morhetz/gruvbox'
+Plug 'mhartington/oceanic-next'
 
 " Initialize plugin system
 call plug#end()
 
 " map leader key to space
 let mapleader = ' '
+
+" python bin path
+let g:python_host_prog  = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 "  reload files on file changes
 augroup AutoSwap

@@ -5,8 +5,8 @@ let $LANG = 'en_US.utf8'
 
 " color theme
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-colorscheme gruvbox
+" background=dark
+colorscheme OceanicNext
 
 " other interesting themes
 "baycomb
@@ -19,6 +19,8 @@ colorscheme gruvbox
 "railscasts
 " molokai using let g:rehash256 = 1
 " Solarized
+" gruvbox
+" palenight
 
 syntax enable
 set laststatus=2                    " keep last status, useful for function signatures
@@ -55,7 +57,6 @@ set listchars+=trail:•              " BULLET (U+2022, UTF-8: E2 80 A2)
 set nojoinspaces                    " don't autoinsert two spaces after '.', '?', '!' for join command
 set hidden                          " allow buffer hiding without save
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " neovim can display a nice cursor line in insert mode that blinks
 set inccommand=split                " nice preview of search and replace actions
 
 set showmatch                       " show matching brackets
@@ -70,7 +71,7 @@ set foldlevelstart=99               " no initial folding
 
 set updatetime=1000                 " when to execute CursorHold
 
-if has("gui_vimr")
+if has("termguicolors")
   set termguicolors                 " use gui background/foreground
 endif
 

@@ -54,4 +54,4 @@ vnoremap Q :norm @q<cr>
 " language server
 nmap gd :call LanguageClient_textDocument_definition()<CR>
 nmap <leader>h :call LanguageClient_textDocument_hover()<CR>
-nmap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+map <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>

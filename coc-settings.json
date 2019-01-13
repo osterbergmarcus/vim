@@ -1,0 +1,12 @@
+{
+	"coc.preferences.autoTrigger": "trigger",
+	"tsserver.enableJavascript": false,
+	"languageserver": {
+		"flow": {
+			"command": "flow-language-server",
+			"args": ["--stdio"],
+			"filetypes": ["javascript", "javascriptreact"],
+			"rootPatterns": [".flowconfig"]
+		}
+	}
+}

@@ -23,6 +23,10 @@ colorscheme OceanicNext
 " palenight
 
 syntax enable
+set cmdheight=2
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
 set laststatus=2                    " keep last status, useful for function signatures
 set noshowmode                      " don't display insert/normal/visual mode, we have a status line for that
 set ts=4                            " number of spaces for a tab

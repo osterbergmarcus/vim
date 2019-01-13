@@ -1,5 +1,5 @@
  " Search git files in project
-nnoremap <C-f> :GFiles<cr>
+nnoremap <leader>o :GFiles<cr>
 
 " Grep for files on FS
 nnoremap <leader>f :Ag<Space>
@@ -47,11 +47,31 @@ noremap <C-k> <C-w>k
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
-" navigate between errors
-"nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-"nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" language server
-nmap gd :call LanguageClient_textDocument_definition()<CR>
-nmap <leader>h :call LanguageClient_textDocument_hover()<CR>
-map <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+" Use <c-space> for trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[c` and `]c` for navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+

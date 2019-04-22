@@ -9,7 +9,6 @@ let g:ale_sign_column_always = 0
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 let g:ale_linters = {
-	\  'csh': ['shell'],
 	\  'go': ['gofmt', 'golint'],
 	\  'javascript': ['prettier', 'eslint', 'flow'],
 	\  'python': ['flake8', 'mypy', 'pylint'],

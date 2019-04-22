@@ -3,4 +3,4 @@ let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 " print spaces between brackets
 let g:prettier#config#bracket_spacing = 'true'
-autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.json PrettierAsync

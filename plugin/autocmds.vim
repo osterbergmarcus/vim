@@ -4,16 +4,16 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 " resize windows when terminal was resized
 autocmd VimResized * execute "normal! \<c-w>="
 
-function! SearchFlowBin()
-  let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
-  if matchstr(local_flow, "^\/\\w") == ''
-      let local_flow= getcwd() . "/" . local_flow
-  endif
-  if executable(local_flow)
-    let g:flow#flowpath = local_flow
-    let g:ale_javascript_flow_executable = local_flow
-  endif
-endfunction
+"function! SearchFlowBin()
+  "let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+  "if matchstr(local_flow, \"^\/\\w") == ''
+      "let local_flow= getcwd() . \"/" . local_flow
+  "endif
+  "if executable(local_flow)
+    "let g:flow#flowpath = local_flow
+    "let g:ale_javascript_flow_executable = local_flow
+  "endif
+"endfunction
 
 autocmd FileType javascript.jsx.flow call SearchFlowBin()
 

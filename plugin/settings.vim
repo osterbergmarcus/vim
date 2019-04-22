@@ -5,7 +5,7 @@ let $LANG = 'en_US.utf8'
 
 " color theme
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" background=dark
+ "background=light
 colorscheme OceanicNext
 
 " other interesting themes
